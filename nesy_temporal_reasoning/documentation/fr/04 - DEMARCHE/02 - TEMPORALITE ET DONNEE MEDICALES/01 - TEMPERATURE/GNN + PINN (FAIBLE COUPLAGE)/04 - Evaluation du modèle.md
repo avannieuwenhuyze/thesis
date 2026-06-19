@@ -3,6 +3,8 @@
 
 ## Courbe d'apprentissage du Weak Temporal GNN
 
+
+![PCA Embeddings](../../../figures/Pasted image 20260619161439.png)
 ![[Pasted image 20260619161439.png]]
 
 Cette figure présente l'évolution conjointe de la fonction de perte sur les jeux d'entraînement (*train loss*) et de validation (*validation loss*) au cours des 30 époques d'apprentissage.
