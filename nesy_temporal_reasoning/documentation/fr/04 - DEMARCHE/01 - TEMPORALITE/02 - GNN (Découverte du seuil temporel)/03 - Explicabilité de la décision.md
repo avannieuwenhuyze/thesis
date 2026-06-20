@@ -5,4 +5,4 @@
 |   |--- class: 1
 
 
-![[figures/Pasted image 20260617124508.png]]
+![[../../../../figures/Pasted image 20260617124508.png]]

@@ -366,7 +366,7 @@ Ces observations suggèrent que le modèle n'apprend pas uniquement à prédire 
 
 ## Figure 1 - Convergence de la période temporelle et de la fonction de perte
 
-![[figures/Pasted image 20260617092523.png]]
+![[../../../../figures/Pasted image 20260617092523.png]]
 
 Cette figure présente l'évolution simultanée de la fonction de perte et de la période temporelle apprise :
 
@@ -418,7 +418,7 @@ Cette figure montre que le modèle ne se contente pas d'apprendre une frontière
 
 ## Figure 2 - Séparation des classes et apprentissage du seuil décisionnel
 
-![[figures/Pasted image 20260617092640.png]]
+![[../../../../figures/Pasted image 20260617092640.png]]
 
 Cette figure présente l'évolution conjointe du nombre moyen d'unités temporelles estimées :
 
@@ -534,7 +534,7 @@ Cette figure montre que le PINN ne se contente pas de découvrir une période te
 
 ## Figure 3 - Convergence des paramètres physiques et décisionnels
 
-![[figures/Pasted image 20260617092810.png]]
+![[../../../../figures/Pasted image 20260617092810.png]]
 
 Cette figure présente l'évolution simultanée des quatre paramètres principaux appris par le modèle :
 
@@ -784,7 +784,7 @@ Cette convergence conjointe constitue un argument fort en faveur de l'interprét
 
 ## Figure 4 — Validation de l'approximation continue du comptage NHSN
 
-![[figures/Pasted image 20260617093009.png]]
+![[../../../../figures/Pasted image 20260617093009.png]]
 
 Cette figure compare le nombre exact de jours calendaires calculé par la règle NHSN :
 
@@ -978,7 +978,7 @@ La figure apporte ainsi une preuve expérimentale que le modèle a effectivement
 ## Figure 5 — Relaxation continue de la fonction discrète NHSN
 
 
-![[figures/Pasted image 20260617093615.png]]
+![[../../../../figures/Pasted image 20260617093615.png]]
 
 Cette figure illustre le mécanisme central du modèle proposé. Elle compare la fonction de comptage discrète utilisée par la règle NHSN à son approximation continue et différentiable apprise par le PINN.
 

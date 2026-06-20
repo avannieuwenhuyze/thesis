@@ -187,7 +187,7 @@ $$
 N = 3  
 $$
 
-![[figures/Pasted image 20260612171625.png]]
+![[../../../../figures/Pasted image 20260612171625.png]]
 # Utilisation de T et $\phi$ sur le dataset de MIMIC 
 
 Lors de la précédente expérience basée uniquement sur la durée, nous avions obtenu un score de classification de 84%
@@ -274,5 +274,5 @@ La question suivante devient alors :
 Cette problématique constitue le point de départ du module temporel.
 
 
-# TODO: Parler de la date de référence pour le calcul ?
+
 

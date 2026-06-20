@@ -71,7 +71,6 @@ $$
 
 Cette approche est simple à mettre en œuvre et permet d'explorer directement le paysage de recherche.
 
----
 
 # Première limite : explosion combinatoire
 

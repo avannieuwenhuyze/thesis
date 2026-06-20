@@ -5,7 +5,7 @@
 
 
 
-![[figures/Pasted image 20260619161439.png]]
+![[../../../../figures/Pasted image 20260619161439.png]]
 
 Cette figure présente l'évolution conjointe de la fonction de perte sur les jeux d'entraînement (*train loss*) et de validation (*validation loss*) au cours des 30 époques d'apprentissage.
 
@@ -27,7 +27,7 @@ Cette courbe montre que l'introduction des paramètres de recentrage appris (*te
 
 ## Évolution des performances du modèle au cours de l'apprentissage
 
-![[figures/Pasted image 20260619161613.png]]
+![[../../../../figures/Pasted image 20260619161613.png]]
 
 Cette figure présente l'évolution des principales métriques de classification sur le jeu de validation au cours des 30 époques d'entraînement :
 
@@ -62,11 +62,11 @@ Cette courbe confirme que l'introduction des paramètres de recentrage appris (*
 
 ## Évolution des seuils de recentrage appris
 
-![[figures/Pasted image 20260619161928.png]]
+![[../../../../figures/Pasted image 20260619161928.png]]
 
-![[figures/Pasted image 20260619162210.png]]
+![[../../../../figures/Pasted image 20260619162210.png]]
 
-![[figures/Pasted image 20260619162028.png]]
+![[../../../../figures/Pasted image 20260619162028.png]]
 
 Ces figures présente l'évolution des deux paramètres de recentrage appris automatiquement par le modèle au cours de l'entraînement :
 
@@ -111,7 +111,7 @@ Cette expérience constitue un résultat important de cette étude : les perform
 
 ## Matrice de confusion du meilleur modèle
 
-![[figures/Pasted image 20260619162527.png]]
+![[../../../../figures/Pasted image 20260619162527.png]]
 
 Cette figure présente la matrice de confusion obtenue pour le meilleur modèle sélectionné durant l'entraînement (époque 28).
 
@@ -168,7 +168,7 @@ Cette figure constitue une validation importante du comportement du modèle. Ell
 
 ## Analyse des embeddings patients projetés par PCA
 
-![[figures/Pasted image 20260619180214.png]]
+![[../../../../figures/Pasted image 20260619180214.png]]
 
 Cette figure représente la projection des embeddings des nœuds *Patient* dans un espace bidimensionnel obtenu par **Analyse en Composantes Principales (PCA)**.
 
@@ -258,7 +258,7 @@ Ces analyses permettront de déterminer si la règle clinique apprise par le mod
 
 ## Espace clinique : Température maximale versus durée estimée de cathétérisation (N̂)
 
-![[figures/Pasted image 20260619180430.png]]
+![[../../../../figures/Pasted image 20260619180430.png]]
 
 Cette figure représente l'ensemble des patients projetés dans l'espace clinique défini par :
 
@@ -390,7 +390,7 @@ permettront de déterminer si le modèle a effectivement redécouvert une forme 
 
 ## Confiance du modèle dans l'espace clinique
 
-![[figures/Pasted image 20260619180558.png]]
+![[../../../../figures/Pasted image 20260619180558.png]]
 
 Cette figure représente les mêmes patients que précédemment dans l'espace clinique :
 
@@ -506,7 +506,7 @@ Cette figure constitue ainsi un premier indice visuel que le modèle redécouvre
 
 ## Analyse des erreurs du modèle dans l'espace clinique
 
-![[figures/Pasted image 20260619180744.png]]
+![[../../../../figures/Pasted image 20260619180744.png]]
 
 Cette figure représente la distribution des erreurs du modèle dans l'espace clinique défini par :
 
@@ -638,7 +638,7 @@ Ces analyses permettront de mieux caractériser les limites du modèle et de gui
 
 ## Espace décisionnel latent appris par le modèle
 
-![[figures/Pasted image 20260619180915.png]]
+![[../../../../figures/Pasted image 20260619180915.png]]
 
 Cette figure représente une approximation de l'espace décisionnel construit par le modèle à partir des deux variables cliniques principales :
 
@@ -814,7 +814,7 @@ permet effectivement de faire émerger une représentation cohérente du risque 
 
 ## Projection des patients dans l'espace décisionnel latent appris
 
-![[figures/Pasted image 20260619181046.png]]
+![[../../../../figures/Pasted image 20260619181046.png]]
 
 Cette figure superpose les patients réels à l'espace décisionnel latent précédemment reconstruit.
 
