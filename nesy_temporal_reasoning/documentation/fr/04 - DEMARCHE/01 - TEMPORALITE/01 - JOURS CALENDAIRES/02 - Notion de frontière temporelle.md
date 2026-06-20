@@ -239,7 +239,7 @@ De manière générale, une frontière temporelle sépare deux intervalles succe
 
 # Conclusion
 
-L'étude des faux négatifs ([[01 - Pourquoi la durée ne suffit pas]]) montre que la durée seule ne permet pas d'expliquer correctement les décisions observées.
+L'étude des faux négatifs ([[thesis_repo/nesy_temporal_reasoning/documentation/fr/04 - DEMARCHE/01 - TEMPORALITE/01 - JOURS CALENDAIRES/01 - Pourquoi la durée ne suffit pas]]) montre que la durée seule ne permet pas d'expliquer correctement les décisions observées.
 
 Les erreurs apparaissent précisément lorsque des intervalles relativement courts traversent plusieurs jours calendaires.
 

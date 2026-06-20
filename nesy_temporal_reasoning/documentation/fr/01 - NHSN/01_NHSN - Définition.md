@@ -53,6 +53,6 @@ L'analyse du NHSN révèle que la surveillance des infections repose simultaném
 
 Cette combinaison fait du NHSN un cadre particulièrement adapté aux approches neuro-symboliques.
 
-[[02_NHSN - Concepts temporels]]
-[[03_NHSN - Définition CAUTI]]
-[[04_NHSN - Règles]]
+[[thesis_repo/nesy_temporal_reasoning/documentation/fr/01 - NHSN/02_NHSN - Concepts temporels]]
+[[thesis_repo/nesy_temporal_reasoning/documentation/fr/01 - NHSN/03_NHSN - Définition CAUTI]]
+[[thesis_repo/nesy_temporal_reasoning/documentation/fr/01 - NHSN/04_NHSN - Règles]]

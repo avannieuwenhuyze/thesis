@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/avann/ontologies/2026/2/untitled-ontology-14/"
+     xml:base="http://www.semanticweb.org/avann/ontologies/2026/2/untitled-ontology-14/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.ontologie-cauti.org/cauti.owl">
+        <owl:imports rdf:resource="http://www.w3.org/2006/time#2016"/>
+    </owl:Ontology>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#determinesDOE">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DOE_DETERMINATION_RULE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DOE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#during">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_STATE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INTERVAL"/>
+        <rdfs:comment>Relates a clinical state or event to the temporal interval over which it occurs.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#eventLocation">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU_ADMISSION"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU"/>
+        <rdfs:comment>Relates a clinical event to the hospital unit where the event takes place. For example, an ICU admission event occurs in a specific Intensive Care Unit within the hospital.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#governedByRule">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_CRITERION"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY_COUNTING_RULE"/>
+        <rdfs:comment>Relates an exposure criterion to the rule that governs how exposure is counted or interpreted.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#governsTemporalAlignment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_ALIGNMENT_DIAGNOSTIC_CRITERIA"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#IWP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasAdmissionEvent">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU_ADMISSION"/>
+        <rdfs:comment>Relates a patient to a clinical admission event representing the moment when the patient is admitted to a hospital unit. This event typically initiates a corresponding stay state such as an ICU stay.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasBodyTemperatureValue">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#BODY_TEMPERATURE"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasClinicalEvent">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:comment>Relates a patient to a clinical event that occurs during their care context, such as a body temperature measurement.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasDOE">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#INFECTIOUS_EPISODE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DOE"/>
+        <rdfs:comment>Relates an infectious episode to its Date of Event (DOE). This property is used to associate an infectious episode with the surveillance date corresponding to the first criterion element used to meet the infection definition.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasDeviceEvent">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_EVENT"/>
+        <rdfs:comment>Relates a patient to a clinical event involving a medical device during the course of care.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasDeviceState">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_STATE"/>
+        <rdfs:comment>Relates a patient to a clinical state describing the presence, absence, or temporal condition of a medical device in the patient.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasExposureCriterion">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CATHETER_ASSOCIATED_INFECTIOUS_EPISODE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_CRITERION"/>
+        <rdfs:comment>Relates a catheter-associated infectious episode to the exposure criterion used for device-attribution assessment.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasExposureThreshold">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_CRITERION"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#THRESHOLD_2_CAL_DAY"/>
+        <rdfs:comment>Relates an exposure criterion to the threshold parameter used to determine whether the exposure requirement is satisfied.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasIWP">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#INFECTIOUS_EPISODE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#IWP"/>
+        <rdfs:comment>Relates an infectious episode to its Infection Window Period (IWP). This property is used to associate an infectious episode with the surveillance time window during which all required diagnostic elements must occur.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasInfectiousEpisode">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#INFECTIOUS_EPISODE"/>
+        <rdfs:comment>Relates a patient to an infectious episode occurring in that patient. This property is used to associate a patient with a clinically or surveillance-relevant infection episode, such as CAUTI or CA_ASB.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasRIT">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#INFECTIOUS_EPISODE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#RIT"/>
+        <rdfs:comment>Relates an infectious episode to its Repeat Infection Timeframe (RIT). This property is used to associate an infectious episode with the surveillance time window during which no new infection of the same type is reported.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasStayState">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU_STAY"/>
+        <rdfs:comment>Relates a patient to a clinical stay state representing their presence in a hospital unit. For example, a patient may have an ICU stay state indicating that the patient is currently hospitalized in an Intensive Care Unit during a specific temporal interval.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasTemporalInstant">
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INSTANT"/>
+        <rdfs:comment>Relates a surveillance temporal entity to the temporal instant corresponding to its time value. This property is used to associate a surveillance-defined temporal construct, such as the Date of Event (DOE), with a temporal instant.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#hasTemporalInterval">
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INTERVAL"/>
+        <rdfs:comment>Relates a surveillance temporal entity to the temporal interval corresponding to its time span. This property is used to associate a surveillance-defined temporal construct, such as the Infection Window Period (IWP) or the Repeat Infection Timeframe (RIT), with a temporal interval.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#includeInExposureDay">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DOE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY_OF_EXPOSURE"/>
+        <rdfs:comment>Relates a Date of Event (DOE) to a calendar day of exposure in which that surveillance instant is included. This property is used to represent that the date of event falls within a calendar day counted as device exposure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#includedInWindow">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_INSTANT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_WINDOW"/>
+        <rdfs:comment>Relates a surveillance temporal instant to a temporal window in which that instant is included. For example, a date of event (DOE) may be included in a post-removal 48-hour window following catheter removal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#involvesDevice">
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#MEDICAL_DEVICE"/>
+        <rdfs:comment>Relates a patient to a clinical state describing the presence, absence, or temporal condition of a medical device in the patient.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#locatedIn">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PATIENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU"/>
+        <rdfs:comment>Indicates the hospital unit in which a clinical stay occurs.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#observedDuring">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#PARTIAL_DAY_DEVICE_PRESENCE"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#occursAt">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INSTANT"/>
+        <rdfs:comment>Relates a clinical event to the temporal instant at which the event occurs.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#stateLocation">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU_STAY"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#ICU"/>
+        <rdfs:comment>Relates a clinical state to the hospital unit in which that state occurs. For example, an ICU stay state is located in a specific Intensive Care Unit where the patient is receiving care.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#useExposureDay">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_CRITERION"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY_OF_EXPOSURE"/>
+        <rdfs:comment>Relates an exposure criterion to the notion of calendar day of exposure used in its temporal interpretation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologie-cauti.org/cauti.owl#windowAfterEvent">
+        <rdfs:domain rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:range rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_WINDOW"/>
+        <rdfs:comment>Relates a clinical event to the temporal window that begins immediately after that event. For example, a catheter removal event may be followed by a post-removal 48-hour window relevant to device exposure assessment.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#BODY_TEMPERATURE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_OBSERVATION"/>
+        <rdfs:label xml:lang="en">Body Temperature</rdfs:label>
+        <rdfs:comment xml:lang="en">A clinical observation and clinical event corresponding to a single body temperature measurement recorded for a patient at a specific point in time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INTERVAL"/>
+        <rdfs:label>Calendar day</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY_COUNTING_RULE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_NORMATIVE_ENTITY"/>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CALENDAR_DAY_OF_EXPOSURE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_INTERVAL"/>
+        <rdfs:comment>A surveillance temporal interval representing a calendar day that qualifies as a day of exposure to an indwelling urinary catheter. In this ontology, a calendar day of exposure is determined according to the applicable calendar-day counting rule.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CATHETERIZATION">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_STATE"/>
+        <rdfs:comment>A clinical state of a patient in which an indwelling urinary catheter is present. This state persists over a temporal interval and is used to represent patient exposure to urinary catheterization.</rdfs:comment>
+        <rdfs:label>Catheterization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CATHETER_ASSOCIATED_INFECTIOUS_EPISODE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#INFECTIOUS_EPISODE"/>
+        <rdfs:comment>A catheter-associated infectious episode occurring in a patient in the context of urinary catheter exposure. In this ontology, this class groups infectious episodes linked to indwelling urinary catheter use, including CAUTI and CA_ASB.</rdfs:comment>
+        <rdfs:label>Catheter associated infectious episode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CATH_INSERTION">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_EVENT"/>
+        <rdfs:comment>A device event representing the placement of an indwelling urinary catheter in a patient. This event occurs at a specific temporal instant and initiates a catheterization state.</rdfs:comment>
+        <rdfs:label>Catheter insertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CATH_REINSERTION">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_EVENT"/>
+        <rdfs:comment>A device event representing the re-placement of an indwelling urinary catheter in a patient after a prior removal. This event occurs at a specific temporal instant and initiates a new catheterization state.</rdfs:comment>
+        <rdfs:label>Catheter reinsertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CATH_REMOVAL">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_EVENT"/>
+        <rdfs:comment>A device event representing the removal of an indwelling urinary catheter from a patient. This event occurs at a specific temporal instant and terminates a catheterization state.</rdfs:comment>
+        <rdfs:label>Catheter removal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CAUTI">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CATHETER_ASSOCIATED_INFECTIOUS_EPISODE"/>
+        <rdfs:comment>A catheter-associated urinary tract infection infectious episode. In this ontology, CAUTI represents a subtype of catheter-associated infectious episode linked to indwelling urinary catheter exposure and meeting the applicable surveillance definition for catheter-associated urinary tract infection.</rdfs:comment>
+        <rdfs:label>CAUTI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CA_ASB">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CATHETER_ASSOCIATED_INFECTIOUS_EPISODE"/>
+        <rdfs:comment>A catheter-associated asymptomatic bacteriuria infectious episode. In this ontology, CA_ASB represents a subtype of catheter-associated infectious episode linked to indwelling urinary catheter exposure in the absence of symptoms, according to the applicable surveillance definition.</rdfs:comment>
+        <rdfs:label>CA ASB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_ENTITY">
+        <rdfs:comment>A physical or material entity involved in healthcare activities within the hospital context. Examples include patients, medical devices, and hospital units. Clinical entities participate in clinical events and may be involved in clinical states occurring during patient care.</rdfs:comment>
+        <rdfs:label>Clinical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologie-cauti.org/cauti.owl#hasTemporalInstant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INSTANT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An occurrence in clinical care that happens at a specific moment in time and may initiate, modify, or terminate a clinical state. Examples include ICU admission or medical procedures. Clinical events are associated with temporal instants and involve clinical entities such as patients or hospital units.</rdfs:comment>
+        <rdfs:label>Clinical event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_OBSERVATION">
+        <rdfs:label xml:lang="en">Clinical Observation</rdfs:label>
+        <rdfs:comment xml:lang="en">A measurable or observable clinical finding collected during patient care, including vital signs, laboratory measurements, physiological parameters, symptoms, or other healthcare-related observations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_STATE">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologie-cauti.org/cauti.owl#hasTemporalInterval"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INTERVAL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A persistent condition or situation involving one or more clinical entities that exists over a temporal interval. Examples include an ICU stay or the presence of a medical device in a patient. Clinical states extend over time and may be initiated or terminated by clinical events.</rdfs:comment>
+        <rdfs:label>Clinical state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#DEVICE_EVENT">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:comment>A clinical event involving a medical device during patient care. Device events occur at a specific temporal instant and may initiate, terminate, or modify a device-related clinical state in the patient.</rdfs:comment>
+        <rdfs:label>Device event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#DEVICE_STATE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_STATE"/>
+        <rdfs:comment>A clinical state of a patient representing a condition related to the presence, absence, or transition of a medical device. Device states persist over a temporal interval and describe the patient&apos;s exposure or relationship to a device during healthcare delivery. Examples include catheterization, temporary interruption of catheterization, or post-removal monitoring periods.</rdfs:comment>
+        <rdfs:label>Device state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#DOE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_INSTANT"/>
+        <rdfs:comment>The Date of Event (DOE) is a surveillance temporal entity representing the date on which the first element used to meet the infection criterion occurs. In this ontology, the DOE is associated with an infectious episode and is used for surveillance classification and temporal reasoning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#DOE_DETERMINATION_RULE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_NORMATIVE_ENTITY"/>
+        <rdfs:comment>A surveillance normative entity representing the rule used to determine the Date of Event (DOE) for an infectious episode. In this ontology, this rule captures the principle that the DOE corresponds to the first criterion element used to satisfy the infection definition within the Infection Window Period.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_CRITERION">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_NORMATIVE_ENTITY"/>
+        <rdfs:comment>A surveillance normative entity representing the condition under which a patient is considered exposed to an indwelling urinary catheter for infection attribution purposes. In this ontology, the exposure criterion is defined using calendar-day counting rules, exposure days, and threshold parameters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_THRESHOLD">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_NORMATIVE_ENTITY"/>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#HOSPITAL_UNIT">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_ENTITY"/>
+        <rdfs:comment>A hospital care location in which patients receive medical treatment and clinical monitoring.</rdfs:comment>
+        <rdfs:label>Hospital unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#ICU">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#HOSPITAL_UNIT"/>
+        <rdfs:comment>An Intensive Care Unit (ICU) is a hospital care location providing intensive monitoring and treatment for critically ill patients.</rdfs:comment>
+        <rdfs:label>Intensive care unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#ICU_ADMISSION">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:comment>A clinical event marking the moment when a patient is admitted to an Intensive Care Unit (ICU), initiating an ICU stay.</rdfs:comment>
+        <rdfs:label>Intensive care unit admission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#ICU_STAY">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_STATE"/>
+        <rdfs:comment>A clinical state representing the period during which a patient is present and receiving care in an Intensive Care Unit (ICU). This state persists over a temporal interval.</rdfs:comment>
+        <rdfs:label>Intensive care unit stay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#INFECTIOUS_EPISODE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_ENTITY"/>
+        <rdfs:comment>A clinical entity representing an occurrence of infection in a patient. In this ontology, an infectious episode is the central unit used to represent and organize surveillance-related temporal entities such as the DOE, IWP, and RIT.</rdfs:comment>
+        <rdfs:label>Infectious episode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#IUC">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#MEDICAL_DEVICE"/>
+        <rdfs:comment>An indwelling urinary catheter (IUC) is a medical device inserted into the bladder through the urethra to allow continuous drainage of urine. In this ontology, the IUC is the device associated with catheterization states and device-related clinical events such as insertion and removal.</rdfs:comment>
+        <rdfs:label>Indwelling urinary catheter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#IWP">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_WINDOW"/>
+        <rdfs:comment>The Infection Window Period (IWP) is a surveillance temporal entity representing the time window during which all elements of a site-specific infection criterion must occur. In this ontology, the IWP is associated with an infectious episode and supports temporal alignment of diagnostic criteria.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#MEDICAL_DEVICE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_ENTITY"/>
+        <rdfs:comment>A physical device used in the delivery of healthcare to diagnose, monitor, or treat a patient. Medical devices may be inserted, removed, or remain present in the patient during a period of care.</rdfs:comment>
+        <rdfs:label>Medical device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#PARTIAL_DAY_DEVICE_PRESENCE">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_STATE"/>
+        <rdfs:comment>A clinical state of a patient representing the presence of an indwelling urinary catheter during any portion of a calendar day. This state is used to support temporal representation of device presence at the day level.</rdfs:comment>
+        <rdfs:label>Partial day of presence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#PATIENT">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_ENTITY"/>
+        <rdfs:comment>A human individual receiving healthcare services within the hospital. In this ontology, the patient is the central clinical entity involved in ICU stays, device use, and potential infectious episodes.</rdfs:comment>
+        <rdfs:label>patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#POST_REMOVAL_48H_WINDOW">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_WINDOW"/>
+        <rdfs:comment>A temporal clinical state of a patient representing the period following removal of an indwelling urinary catheter. This state is used to represent the immediate post-removal period relevant to device exposure assessment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#RIT">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_WINDOW"/>
+        <rdfs:comment>The Repeat Infection Timeframe (RIT) is a surveillance temporal entity representing the time period during which no new infection of the same type is reported. In this ontology, the RIT is associated with an infectious episode for surveillance interpretation and episode continuity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_NORMATIVE_ENTITY">
+        <rdfs:comment>A surveillance entity representing a normative construct used to define, qualify, or interpret infection surveillance criteria. In this ontology, surveillance normative entities include exposure criteria, counting rules, and threshold parameters used in CAUTI and CA_ASB assessment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_ENTITY">
+        <rdfs:comment>A temporal entity defined for infection surveillance purposes rather than as a purely general temporal category. In this ontology, surveillance temporal entities are used to represent NHSN-defined temporal constructs such as the Date of Event (DOE), the Infection Window Period (IWP), and the Repeat Infection Timeframe (RIT).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_INSTANT">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_ENTITY"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologie-cauti.org/cauti.owl#hasTemporalInstant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INSTANT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A surveillance temporal entity corresponding to a single point in time. In this ontology, this class groups surveillance-defined temporal entities that have the form of a temporal instant, such as the Date of Event (DOE).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_INTERVAL">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_ENTITY"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologie-cauti.org/cauti.owl#hasTemporalInterval"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INTERVAL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A surveillance temporal entity corresponding to a bounded period of time. In this ontology, this class groups surveillance-defined temporal entities that have the form of a temporal interval, such as the Infection Window Period (IWP) and the Repeat Infection Timeframe (RIT).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_ALIGNMENT_DIAGNOSTIC_CRITERIA">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_NORMATIVE_ENTITY"/>
+        <rdfs:comment>A surveillance normative entity representing the requirement that diagnostic elements used to satisfy an infection definition must occur within an allowed temporal window. In this ontology, this class captures the temporal alignment constraint underlying the Infection Window Period.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_ENTITY">
+        <rdfs:comment>A temporal entity representing an abstract component of time used to describe when clinical events or states occur. In this ontology, temporal entities are used to represent time instants and time intervals associated with clinical events (such as admissions) and clinical states (such as ICU stays or device presence).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INSTANT">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_ENTITY"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:comment>A temporal entity representing a specific point in time with no duration, such as the exact time of an admission or event occurrence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_INTERVAL">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_ENTITY"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment>A temporal entity representing a continuous duration between two temporal instants. Examples include the duration of an ICU stay or device presence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#TEMPORAL_WINDOW">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#SURVEILLANCE_TEMPORAL_INTERVAL"/>
+        <rdfs:comment>A surveillance temporal interval defined relative to a clinical event or surveillance rule. Temporal windows are bounded periods used in infection surveillance to constrain when diagnostic elements, exposures, or events must occur. Examples include the Infection Window Period (IWP), the Repeat Infection Timeframe (RIT), and the post-removal 48-hour window following catheter removal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#TEMP_CATH_INTERRUPTION">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#DEVICE_STATE"/>
+        <rdfs:comment>A clinical state of a patient representing a temporary interruption of indwelling urinary catheterization. This state separates periods of catheterization and may interrupt the continuity of device exposure.</rdfs:comment>
+        <rdfs:label>Temporary catheter interruption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#THRESHOLD_2_CAL_DAY">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#EXPOSURE_THRESHOLD"/>
+        <rdfs:comment>A surveillance threshold parameter representing the requirement that device exposure exceeds two calendar days. In this ontology, this threshold is used as part of the exposure criterion for catheter-associated infectious episodes.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.ontologie-cauti.org/cauti.owl#POSSIBLE_CAUTI">
+        <rdfs:subClassOf rdf:resource="http://www.ontologie-cauti.org/cauti.owl#CLINICAL_EVENT"/>
+        <rdfs:label xml:lang="en">Possible CAUTI</rdfs:label>
+        <rdfs:comment xml:lang="en">A weakly labeled clinical event representing a possible catheter-associated urinary tract infection pattern inferred from catheter exposure and body temperature observations.</rdfs:comment>
+    </owl:Class>
+
+</rdf:RDF>
