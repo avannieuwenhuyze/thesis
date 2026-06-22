@@ -187,7 +187,8 @@ $$
 N = 3  
 $$
 
-![[20260612171625.png]]
+
+![image](../../../figures/20260612171625.png)
 # Utilisation de T et $\phi$ sur le dataset de MIMIC 
 
 Lors de la précédente expérience basée uniquement sur la durée, nous avions obtenu un score de classification de 84%

@@ -365,8 +365,8 @@ Ces observations suggèrent que le modèle n'apprend pas uniquement à prédire 
 # Analyses
 
 ## Figure 1 - Convergence de la période temporelle et de la fonction de perte
+![image](../../../figures/20260617092523.png)
 
-![[20260617092523.png]]
 
 Cette figure présente l'évolution simultanée de la fonction de perte et de la période temporelle apprise :
 
@@ -417,8 +417,8 @@ suggère que la structure temporelle journalière constitue une solution optimal
 Cette figure montre que le modèle ne se contente pas d'apprendre une frontière de classification. Il découvre progressivement une périodicité proche du jour calendaire utilisé par les règles NHSN, uniquement à partir des intervalles temporels observés et des labels associés.
 
 ## Figure 2 - Séparation des classes et apprentissage du seuil décisionnel
+![image](../../../figures/20260617092640.png)
 
-![[20260617092640.png]]
 
 Cette figure présente l'évolution conjointe du nombre moyen d'unités temporelles estimées :
 
@@ -533,8 +533,8 @@ $$
 Cette figure montre que le PINN ne se contente pas de découvrir une période temporelle. ==Il apprend également une représentation latente du comptage des jours calendaires== dans laquelle les classes positives et négatives deviennent naturellement séparables. La règle décisionnelle NHSN émerge alors comme une conséquence de cette représentation plutôt que comme une contrainte imposée explicitement au modèle.
 
 ## Figure 3 - Convergence des paramètres physiques et décisionnels
+![image](../../../figures/20260617092810.png)
 
-![[20260617092810.png]]
 
 Cette figure présente l'évolution simultanée des quatre paramètres principaux appris par le modèle :
 
@@ -783,8 +783,8 @@ garantissant une séparation nette entre les classes.
 Cette convergence conjointe constitue un argument fort en faveur de l'interprétabilité du modèle. Contrairement à un réseau neuronal classique dont les paramètres internes sont difficiles à interpréter, chaque paramètre appris possède ici une signification temporelle ou décisionnelle directement reliée aux règles cliniques étudiées.
 
 ## Figure 4 — Validation de l'approximation continue du comptage NHSN
+![image](../../../figures/20260617093009.png)
 
-![[20260617093009.png]]
 
 Cette figure compare le nombre exact de jours calendaires calculé par la règle NHSN :
 
@@ -976,9 +976,9 @@ possède ici une interprétation clinique explicite et directement vérifiable.
 La figure apporte ainsi une preuve expérimentale que le modèle a effectivement découvert le mécanisme de comptage temporel sous-jacent aux décisions NHSN.
 
 ## Figure 5 — Relaxation continue de la fonction discrète NHSN
+![image](../../../figures/20260617093615.png)
 
 
-![[20260617093615.png]]
 
 Cette figure illustre le mécanisme central du modèle proposé. Elle compare la fonction de comptage discrète utilisée par la règle NHSN à son approximation continue et différentiable apprise par le PINN.
 

@@ -191,13 +191,11 @@ C:\DEVELOPPEMENT\THESE\CAUTI_RESEARCH\P4_TEMPORAL_MODULE\01B_T_AND_PHI\02_SEARCH
 
 # Représentation des résultats
 
-![[20260614204103.png]]
 
+![image](../../../figures/20260614204103.png)
+![image](../../../figures/20260614204122.png)
+![image](../../../figures/20260614204141.png)
 
-![[20260614204122.png]]
-
-
-![[20260614204141.png]]
 
 # Hypothèse
 

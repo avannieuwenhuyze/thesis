@@ -71,7 +71,8 @@ En particulier, le PINN n'injecte pas :
 $$
 \hat N > 2
 $$
-![[20260617113445.png]]
+![image](../../../figures/20260617113445.png)
+
 Le modèle de Graph Neural Network doit retrouver lui-même cette relation à partir de la représentation enrichie de la ==cathétérisation==.
 
 ==Ainsi, le PINN agit comme un mécanisme de découverte de connaissance temporelle tandis que le GNN conserve la responsabilité d'apprendre la règle de décision à partir du graphe enrichi.==

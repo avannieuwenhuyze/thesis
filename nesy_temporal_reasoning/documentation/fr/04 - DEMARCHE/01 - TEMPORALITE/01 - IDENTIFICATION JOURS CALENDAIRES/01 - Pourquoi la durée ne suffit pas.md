@@ -220,7 +220,7 @@ et le modèle fondé uniquement sur la durée conclut :
 False
 ```
 
-![[20260612163232.png]]
+![image](../../../figures/20260612163232.png)
 
 ## Enseignement principal
 
