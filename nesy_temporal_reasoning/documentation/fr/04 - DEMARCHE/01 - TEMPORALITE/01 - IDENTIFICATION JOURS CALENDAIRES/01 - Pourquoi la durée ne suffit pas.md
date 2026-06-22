@@ -220,7 +220,8 @@ et le modèle fondé uniquement sur la durée conclut :
 False
 ```
 
-![[../../../../figures/Pasted image 20260612163232.png]]
+![[20260612163232.png]]
+
 ## Enseignement principal
 
 Ces erreurs montrent que la décision ne dépend pas uniquement du temps écoulé.

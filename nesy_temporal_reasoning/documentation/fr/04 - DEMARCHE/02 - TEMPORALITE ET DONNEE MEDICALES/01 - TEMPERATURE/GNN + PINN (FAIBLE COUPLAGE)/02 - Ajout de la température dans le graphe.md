@@ -5,7 +5,7 @@ Le modèle PINN permet d'enrichir le graphe avec  le $\hat{N}$ prédit (noeud  T
 
 ## Ajout de la température
 
-![[../../../../figures/Pasted image 20260619174718.png|399]]
+![[20260619174718.png|399]]
 
 Le patient a un évènement clinique de type body_temperature 
 
@@ -34,7 +34,7 @@ Le patient a un évènement clinique de type body_temperature
 
 La température est une sous classe de CLINICAL_EVENT qui utilise TEMPORAL_INSTANT (qui étend TEMPORAl_INSTANT de OWLTime)
 
-![[../../../../figures/Pasted image 20260619175129.png]]
+![[20260619175129.png]]
 
 `ex:body_temperature_10007818_32359580_01_002 a :BODY_TEMPERATURE ;`
     `rdfs:label "Body temperature 35.00 °C" ;`
@@ -43,11 +43,11 @@ La température est une sous classe de CLINICAL_EVENT qui utilise TEMPORAL_INSTA
 
 
 
-![[../../../../figures/Pasted image 20260619172305.png]]
+![[20260619172305.png]]
 
 
 
 
 
 
-![[../../../../figures/Pasted image 20260619153128.png]]
+![[20260619153128.png]]

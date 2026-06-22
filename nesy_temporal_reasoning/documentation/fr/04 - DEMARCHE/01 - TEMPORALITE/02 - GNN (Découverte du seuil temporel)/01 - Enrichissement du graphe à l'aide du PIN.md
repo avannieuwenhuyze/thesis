@@ -32,9 +32,9 @@ CAUTI Detection
 - Le GNN exploite le graphe enrichi pour détecter les CAUTI.
 
 
-![[../../../../figures/Pasted image 20260617113445.png]]
+![[20260617113445.png]]
 ## Principe d'enrichissement du graphe
-![[../../../../figures/Pasted image 20260617113445.png]]
+![[20260617113445.png]]
 L'objectif du module PINN n'est pas de produire directement une décision CAUTI ni de transmettre cette décision au modèle graphe.
 
 Le rôle du PINN consiste à découvrir automatiquement la structure temporelle sous-jacente aux règles NHSN et à produire une variable temporelle latente interprétable :
@@ -71,7 +71,7 @@ En particulier, le PINN n'injecte pas :
 $$
 \hat N > 2
 $$
-![[../../../../figures/Pasted image 20260617113445.png]]
+![[20260617113445.png]]
 Le modèle de Graph Neural Network doit retrouver lui-même cette relation à partir de la représentation enrichie de la ==cathétérisation==.
 
 ==Ainsi, le PINN agit comme un mécanisme de découverte de connaissance temporelle tandis que le GNN conserve la responsabilité d'apprendre la règle de décision à partir du graphe enrichi.==
